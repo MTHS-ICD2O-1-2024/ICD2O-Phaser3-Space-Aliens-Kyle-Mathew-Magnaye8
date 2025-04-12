@@ -15,4 +15,4 @@ const config = {
 }
 
 const game = new Phaser.Game(config)
-console.Log(game)
+console.log(game)
