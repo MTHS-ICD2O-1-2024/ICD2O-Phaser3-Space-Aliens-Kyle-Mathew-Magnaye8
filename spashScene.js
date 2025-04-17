@@ -6,30 +6,26 @@
 // Created on: Apirl 17 2025
 // This is the Splash Scene
 
+/**
+ * This class is the Splash Scene.
+*/
 class SpashScene extends Phaser.Scene {
-constructor () {
-  super({ key: 'spashScene' })
-}
+  constructor () {
+    super({ key: 'spashScene' })
+  }
 
-init (data) {
-  this.cameras.main.setBackgroundColor('#ffffff')
-}
+  init (data) {
+    this.cameras.main.setBackgroundColor('#ffffff')
+  }
 
-preload () {
-  console.log('Spash Scene')
-}
+  preload () {
+    console.log('Spash Scene')
+  }
 
+  create (data) {
+  }
 
-
-
-
-
-
-
-create (data) {
-}
-
-update (time, delta) {
-}
+  update (time, delta) {
+  }
 }
 export default SpashScene
