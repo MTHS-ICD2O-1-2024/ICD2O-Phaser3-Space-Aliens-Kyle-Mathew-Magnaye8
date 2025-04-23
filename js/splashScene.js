@@ -9,9 +9,9 @@
 /**
  * This class is the Splash Scene.
 */
-class SpashScene extends Phaser.Scene {
+class SplashScene extends Phaser.Scene {
   constructor () {
-    super({ key: 'spashScene' })
+    super({ key: 'splashScene' })
   }
 
   init (data) {
@@ -19,7 +19,7 @@ class SpashScene extends Phaser.Scene {
   }
 
   preload () {
-    console.log('Spash Scene')
+    console.log('Splash Scene')
   }
 
   create (data) {
@@ -28,4 +28,4 @@ class SpashScene extends Phaser.Scene {
   update (time, delta) {
   }
 }
-export default SpashScene
+export default SplashScene

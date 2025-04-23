@@ -6,10 +6,10 @@
 // Created on: Mar 2025
 // This file contains the JS functions for index.html
 
-import SpashScene from './spashScene.js'
+import SplashScene from './splashScene.js'
 
 //Our game scene
-const spashScene = new SplashScene()
+const splashScene = new SplashScene()
 
 /**
  * Start Phaser Game.
@@ -19,7 +19,7 @@ const config = {
   width: 1920,
   height: 1080,
   physics: {
-    default: "arcade",
+    default: 'arcade',
     arcade: {
       debug: true,
     },
@@ -39,7 +39,7 @@ const game = new Phaser.Game(config)
 
 // load scenes
 // NOTE: remend=ber that any "key" is global and CAN NOT be reused!
-game.scene.add('spashScene', spashScene)
+game.scene.add('splashScene', splashScene)
 
 // start title
-game.scene.start('spashScene')
+game.scene.start('splashScene') 
