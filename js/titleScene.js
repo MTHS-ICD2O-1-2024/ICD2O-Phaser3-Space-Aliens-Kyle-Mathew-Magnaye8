@@ -4,27 +4,28 @@
 //
 // Created by: kyle.matthew.magnaye
 // Created on: Apirl 17 2025
-// This is the Splash Scene
+// This is the Title Scene
 
 /**
  * This class is the Splash Scene.
 */
-class SpashScene extends Phaser.Scene {
+class TitleScene extends Phaser.Scene {
   constructor() {
-    super({ key: 'spashScene' })
+    super({ key: 'titleScene' })
   }
 
   init(data) {
-    this.cameras.main.setBackgroundColor('ffffff')
+    this.cameras.main.setBackgroundColor('#ffffff')
   }
 
   preload() {
-    console.log('Splash Scene')
+    console.log('Title Scene')
   }
+
   create(data) {
   }
+
   update(time, delta) {
-    this.scene.switch("titleScene")
   }
 }
-export default SpashScene
+export default TitleScene
