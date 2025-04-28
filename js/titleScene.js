@@ -1,25 +1,24 @@
+
 /* global Phaser */
 
-// Copyright (c) 2025 kyle.matthew.magnaye All rights reserved
+// Copyright (c) 2025 Emre Guzel All rights reserved
 //
-// Created by: kyle.matthew.magnaye
-// Created on: Apirl 17 2025
+// Created by: Kyle Matthew
+// Created on: Apr 2025
 // This is the Title Scene
 
-/**
- * This class is the Splash Scene.
-*/
 class TitleScene extends Phaser.Scene {
   constructor() {
     super({ key: 'titleScene' })
   }
-
+  
+  
   init(data) {
-    this.cameras.main.setBackgroundColor('#ffffff')
+    this.cameras.main.setBackgroundColor("#ffffff") // missing # symbol
   }
 
   preload() {
-    console.log('Title Scene')
+    console.log("Title Scene")
   }
 
   create(data) {
@@ -28,4 +27,5 @@ class TitleScene extends Phaser.Scene {
   update(time, delta) {
   }
 }
+
 export default TitleScene
