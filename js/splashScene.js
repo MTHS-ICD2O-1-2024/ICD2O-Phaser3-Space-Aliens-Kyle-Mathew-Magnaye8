@@ -16,12 +16,12 @@ class SplashScene extends Phaser.Scene {
    * @param {object} data 
    */
   init(data) {
-    this.cameras.main.setBackgroundColor("#ffffff")
+    this.cameras.main.setBackgroundColor('#ffffff')
   }
 
   preload() {
-    console.log("Splash Scene")
-    this.load.image("splashSceneBackground", "./assets/splashSceneImage.png")
+    console.log('Splash Scene')
+    this.load.image('splashSceneBackground', './assets/splashSceneImage.png')
   }
 
   /**
@@ -31,7 +31,7 @@ class SplashScene extends Phaser.Scene {
     this.splashSceneBackgroundImage = this.add.sprite(
       0,
       0,
-      "splashSceneBackground"
+      'splashSceneBackground'
     )
     this.splashSceneBackgroundImage.x = 1920 / 2
     this.splashSceneBackgroundImage.y = 1080 / 2
@@ -44,7 +44,7 @@ class SplashScene extends Phaser.Scene {
    */
   update(time, delta) {
     if (time > 3000) {
-      this.scene.switch("titleScene")
+      this.scene.switch('titleScene')
     }
   }
 }

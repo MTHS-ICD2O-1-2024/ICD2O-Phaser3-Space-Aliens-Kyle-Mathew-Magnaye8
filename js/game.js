@@ -7,18 +7,20 @@
 // This file contains the JS functions for index.html
 
 // Setting the window
-import SplashScene from "./SplashScene.js"
-import TitleScene from "./titleScene.js"
+import SplashScene from './splashScene.js'
+import TitleScene from './titleScene.js'
+import MenuScene from './menuScene.js'
 
 const splashScene = new SplashScene()
 const titleScene = new TitleScene()
+const menuScene = new MenuScene()
 
 const config = {
   type: Phaser.AUTO,
   width: 1920,
   height: 1080,
   physics: {
-    default: "arcade",
+    default: 'arcade',
     arcade: {
       debug: true,
     },
@@ -32,7 +34,8 @@ const config = {
 
 const game = new Phaser.Game(config)
 
-game.scene.add("splashScene", splashScene)
-game.scene.add("titleScene", titleScene)
+game.scene.add('splashScene', splashScene)
+game.scene.add('titleScene', titleScene)
+game.scene.add('menuScene', menuScene)
 
-game.scene.start("splashScene")
+game.scene.start('splashScene')
