@@ -27,6 +27,9 @@ class GameScene extends Phaser.Scene {
     this.score = 0
     this.scoreText = null
     this.scoreTextStyle = { font: '65px Arial', fill: '#ffffff', align: 'center'}
+
+    this.gameOverText = null
+    this.gameOverTextStyle = { font: '65px Arial', fill: '#ff0000', align: 'center' }
   }
 
   init(data) {
@@ -68,6 +71,17 @@ class GameScene extends Phaser.Scene {
       this.scoreText.setText('Score' + this.score.toString())
       this.createAlien()
       this.createAlien()
+    }.bind(this))
+
+    //Collisions between ship and aliens
+    this.physics.add.collider(this.ship, this.aliensGroup, function (shipCollide, alienCollide) {
+      this.sound.play('bomb')
+      this.physics.pause()
+      alienCollide.destroy()
+      shipCollide.destroy()
+      this.gameOverText = this.add.text(1920 / 2 - 200, 1080 / 2 - 50, 'Game Over!\nClick to play again.', this.gameOverTextStyle).setOrigin(0.5)
+      this.gameOverText.setInteractive({useHandCoursor: true})
+      this.gameOverText.on('pointerdown', () => this.scene.start('gameScene'))
     }.bind(this))
   }
 
